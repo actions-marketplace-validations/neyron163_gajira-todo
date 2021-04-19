@@ -1,5 +1,3 @@
-const { get } = require('lodash')
-
 const serviceName = 'github'
 const { format } = require('url')
 const client = require('./client')(serviceName)

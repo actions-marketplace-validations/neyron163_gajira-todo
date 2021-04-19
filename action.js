@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const fetch = require('node-fetch')
 const Jira = require('./common/net/Jira')
 const GitHub = require('./common/net/GitHub')
 
@@ -111,7 +110,6 @@ module.exports = class {
   async findTodoInCommits (repo, commits) {
     return Promise.all(commits.map(async (c) => {
       const res = await this.GitHub.getCommitDiff(repo.full_name, c.id)
-      console.log(res, ' res')
       const rx = /(\/\/|#|\*)\s+@todo/gmi
 
       return getMatches(res, rx, 1)

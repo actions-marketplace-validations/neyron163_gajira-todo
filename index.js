@@ -1,7 +1,7 @@
 const fs = require('fs')
 const YAML = require('yaml')
 const core = require('@actions/core')
-
+console.log(process.env.GITHUB_EVENT_PATH, ' process.env.GITHUB_EVENT_PATH')
 const configPath = `${process.env.HOME}/jira/config.yml`
 const Action = require('./action')
 const githubToken = process.env.GITHUB_TOKEN
