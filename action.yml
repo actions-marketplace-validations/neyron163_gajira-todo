@@ -1,4 +1,4 @@
-name: Jira issue from TODO
+name: Jira optimax Todo creater
 description: Create Jira issue for TODO comments
 branding:
   icon: 'check-square'
