@@ -5,7 +5,7 @@ const core = require('@actions/core')
 const configPath = `${process.env.HOME}/jira/config.yml`
 const Action = require('./action')
 const githubToken = process.env.GITHUB_TOKEN
-console.log(process.env, ' process.env')
+
 // eslint-disable-next-line import/no-dynamic-require
 const githubEvent = require(process.env.GITHUB_EVENT_PATH)
 const config = YAML.parse(fs.readFileSync(configPath, 'utf8'))
